@@ -10,7 +10,7 @@
 
 <body>
     <script>//38.	З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом, працівником, пенсіонером).
-        let age = parseInt(prompt('age'))
+        let age = parseInt(prompt('age'))     Ок.
         if (age >= 1 && age <= 5)
             document.write('you baby')
         else
@@ -28,15 +28,15 @@
     </script>
     <script>//31.	З клавіатури вводяться імена двох дітей та кількість шоколадок. Вивести не екран ім’я того учня, у якого кількість шоколадок є більшою.
         let name = prompt('name', '')
-        name2 = prompt('name2', '')
-        kilk = parseInt(prompt('kilk', ''))
+        name2 = prompt('name2', '')          Не описано змінну name2
+        kilk = parseInt(prompt('kilk', ''))  Кількості треба вводити для обох дітей
         suma = (name, name2 + kilk)
         result = suma, Math.floor((name - name2 + 1) * Math.random());
         alert(result)
     </script>
     <script>//Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби
         let number = parseInt(prompt('you number'))
-        alert(Math.floor(Math.random() * 5))
+        alert(Math.floor(Math.random() * 5))           Потрібно порівнювати згенероване число з числом користувача і виводити виграв чи ні
         let number2 = parseInt(prompt('you number2'))
         alert(Math.floor(Math.random() * 5))
     </script>
@@ -45,15 +45,13 @@
         if (score >= 1 && score <= 5)
             document.write('quartet')
         else
-            document.write('')
         if (score >= 6 && score <= 9)
             document.write('good')
         else
-            document.write('')
         if (score >= 10 && score <= 12)
             document.write('super')
         else
-            document.write('')
+            document.write('error')
     </script>
     <script>//З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.
         let num = parseInt(prompt('keep the price in UAH', ''))
@@ -64,7 +62,7 @@
             if (num2 > num)
                 document.write('purchase allowed')
             let a = num2 - num
-            document.write(`for the rest we offer a bar for ${a} UAH `)
+            document.write(`for the rest we offer a bar for ${a} UAH `)  Пропонувати купляти лотерею треба тоді, коли достаньо коштів (треба додаткову перевірку)
         }
     </script>
     <script>//На роботу компаніє приймає працівників від 32 до 45 років. З клавіатури вводиться вік претендента. З’ясувати, чи може він бути прийнятим на роботу.
@@ -83,9 +81,9 @@
         let num2 = parseInt(prompt("Num2"))
         let max
         if (num1 > num2)
-            max = num1
+            max = num1       Потрібно замінити найбільше на 0 num1=0
         else
-            max = -true
+            max = -true      Тут ще треба порівняти, бо вони можуть бути і рівні і треба замінювати введені числа
         document.write(`Max= ${max}`)
     </script>
     <script>//На роботу компаніє приймає працівників від 32 до 45 років. З клавіатури вводиться вік претендента. З’ясувати, чи може він бути прийнятим на роботу.
@@ -114,12 +112,16 @@
     <script>//1.1.	Найбільше серед двох різних замінити на 0
         let num1 = parseInt(prompt("Num1"))
         let num2 = parseInt(prompt("Num2"))
-        let max
+        
         if (num1 > num2)
-            max = num1
+            num1=0  Треба замінювати найбільше на 0 (num1=0)
         else
-            max = -0
-        document.write(`Max= ${max}`)
+            if(num2>num1)
+                  num2= 0
+            else
+                num1=num2=0
+        
+        document.write(`num1= ${num1} num2= ${num2} `)
     </script>
 </body>
 </html>
